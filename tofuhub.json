@@ -2,6 +2,7 @@
   "name": "create-project-do",
   "description": "A test package to create a project on Digital Ocean",
   "version": "0.0.1",
-  "repository_url": "https://github.com/tofuhubhq/create-project-do.git",
+  "repository": "https://github.com/tofuhubhq/create-project-do.git",
+  "homepage": "https://github.com/tofuhubhq/create-project-do.git",
   "commit": ""
 }
