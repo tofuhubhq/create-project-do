@@ -5,8 +5,7 @@ set -e
 echo "🧠 Generating terraform.tfvars from injected environment variables..."
 
 # Path to where we want to generate the tfvars
-TARGET_DIR="/repo"
-OUTPUT_DIR="/outputs"
+TARGET_DIR="/outputs"
 TFVARS_FILE="$TARGET_DIR/terraform.tfvars"
 
 # Start fresh
@@ -39,12 +38,12 @@ done
 echo "✅ terraform.tfvars generated at $TFVARS_FILE:"
 cat "$TFVARS_FILE"
 
-# Run OpenTofu in the /repo directory
+# Run OpenTofu in the /outputs directory
 echo "🚀 Running OpenTofu..."
 cd "$TARGET_DIR"
-tofu init -backend-config="path=$OUTPUT_DIR/terraform.tfstate"
+tofu init -backend-config="path=$TARGET_DIR/terraform.tfstate"
 tofu plan
-tofu apply -state=$OUTPUT_DIR/terraform.tfstate -auto-approve
+tofu apply -state=$TARGET_DIR/terraform.tfstate -auto-approve
 
 # Extract outputs and send to runner
 echo "📤 Capturing outputs..."
