@@ -5,7 +5,7 @@ set -e
 echo "🧠 Generating terraform.tfvars from injected environment variables..."
 
 # Path to where we want to generate the tfvars
-TARGET_DIR="/repo"
+TARGET_DIR="/outputs"
 TFVARS_FILE="$TARGET_DIR/terraform.tfvars"
 
 # Start fresh
