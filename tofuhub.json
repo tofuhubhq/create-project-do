@@ -4,5 +4,36 @@
   "version": "0.0.2",
   "repository": "https://github.com/tofuhubhq/create-project-do.git",
   "homepage": "https://github.com/tofuhubhq/create-project-do.git",
-  "commit": ""
+  "commit": "",
+  "author": "Tommaso Girotto",
+  "tags": [],
+  "license": "MIT",
+  "type": "package",
+  "inputs": {
+    "do_access_token": {
+      "type": "string",
+      "required": false,
+      "default": "",
+      "description": "DigitalOcean access token",
+      "primitive": "access_token",
+      "provider": "digitalocean",
+      "secret": true
+    },
+    "do_project_name": {
+      "type": "string",
+      "required": false,
+      "default": "",
+      "description": "DigitalOcean project name",
+      "primitive": "project",
+      "provider": "digitalocean"
+    },
+    "do_project_description": {
+      "type": "string",
+      "required": false,
+      "default": "",
+      "description": "DigitalOcean project description",
+      "primitive": "project_description",
+      "provider": "digitalocean"
+    }
+  }
 }
