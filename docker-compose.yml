@@ -1,0 +1,7 @@
+version: '3.9'
+
+services:
+  create-project:
+    build: .
+    container_name: create-project
+    restart: unless-stopped
